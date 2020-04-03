@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load mathfilters %}
+{% block content %}
+    <div class="practice-page">
+    <h4>Question {{ question_index |add:1}}</h4>
+    <h2> {{ question.interval_type }} starting from {{ question.start_note }}</h2>
+    <div class="button-array">
+    {% for i in question.answer_array_as_list %}
+    <div class="question">
+        <button class="answer-button" onclick="location.href = '/practice/{{ type }}?current_question={{ question_index }}&chosen_answer={{ i }}';">{{i}}</button>
+    </div>
+    {% endfor %}
+    </div>
+    </div>
+
+{% endblock %}

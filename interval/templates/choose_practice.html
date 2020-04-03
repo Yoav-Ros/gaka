@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2> Interval Training </h2>
+    <hr>
+    <div class="practice">
+
+        <h4 class="head">Perfect Practice - Start Here!</h4>
+    <div class="text">
+    <p>At this level you will practice perfect intervals.
+    This level offers a practice of unisons, fourths, and fifths on the C scale for an easy start
+    Complete this practice to advance</p>
+    </div>
+    <div class="link">
+    <a href="{% url "practice" "perfect" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Start here</a>
+    </div>
+    </div>
+
+    {% if user.profile.xp > 1000 %}
+    <hr>
+        <div class="practice">
+
+    <h4 class="head">Consonant Practice</h4>
+    <div class="text">
+    <p>With these levels you will practice identifying consonants and perfect intervals</p>
+    </div>
+    <div class="link">
+    <a href="{% url "practice" "consonant" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Consonant</a>
+
+        <a href="{% url "practice" "consonant-advanced" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true"> Advanced</a>
+    </div>
+    </div>
+    {% endif %}
+
+    {% if user.profile.xp > 3000 %}
+    <hr>
+        <div class="practice">
+
+    <h4 class="head">Dissonant Practice</h4>
+    <div class="text">
+    <p>You are now ready for more advanced practice!
+    These levels will include all that you have learned so far and will add dissonant intervals</p>
+    </div>
+    <div class="link">
+    <a href="{% url "practice" "dissonant" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Dissonant</a>
+
+        <a href="{% url "practice" "dissonant-advanced" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Advanced</a>
+    </div>
+            </div>
+        {%  endif %}
+
+
+    {% if user.profile.xp > 7000 %}
+    <hr>
+            <div class="practice">
+
+    <h4 class="head">Augmented and diminished practice</h4>
+
+                <div class="text">
+    <p>Almost done. You are now ready to tackle augmented and diminished intervals
+    These levels will include all you have learned so far</p>
+    </div>
+    <div class="link">
+    <a href="{% url "practice" "augdim" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Aug & Dim</a>
+
+        <a href="{% url "practice" "augdim-advanced" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Advanced</a>
+    </div>
+                </div>
+    {% endif %}
+
+                    {% if user.profile.xp > 10500 %}
+    <hr>
+                <div class="practice">
+
+    <h4 class="head">Free Practice</h4>
+    <div class="text">
+    <p>Congrats! You have learned all the possible intervals
+    These levels will allow you free practice to keep your skills sharp</p>
+    </div>
+    <div class="link">
+    <a href="{% url "practice" "interval" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Free practice</a>
+     </div>
+
+        <a href="{% url "practice" "interval-advanced" %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Advanced</a>
+    </div>
+                    </div>
+                        {% endif %}
+
+{% endblock %}

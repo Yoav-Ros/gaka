@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+{% load mathfilters %}
+
+{% block content %}
+
+    <div class="container profile-card">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+
+            <div class="col-md-4">
+                <img  class ='profile-pic' src="{{ user.profile.avatar.url }}">
+                <p>{{ user.profile.short_description }}</p>
+                <a href="/profile/edit"> Edit profile</a>
+            </div>
+
+
+
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <H1> {{ user.username }}!</H1>
+                    <p> You earned {{ user.profile.xp }} XP! </p>
+
+                <div>
+                    <p>My instruments: {{ user.profile.my_instruments }}</p>
+                    <p>Years of musical experience: {{ user.profile.years_of_musical_experience}}</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

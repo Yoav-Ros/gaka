@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile Creation</title>
+</head>
+<body>
+    <form method = 'Post' enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="everything">
+    <head>
+        <title>Gaka 雅歌</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <h3 class="navbar-brand" >雅歌</h3>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+
+
+
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item active">
+                <a class="nav-link" href="/learn">Learn <span class="sr-only">(current)</span></a>
+                </li>
+
+                {% if user.is_authenticated %}
+
+                <li class="nav-item active">
+                <a class="nav-link" href="/profile">Profile <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="/practice">Practice <span class="sr-only">(current)</span></a>
+                </li>
+                    <li class="nav-item active">
+                <a class="nav-link" href="/logout">Logout <span class="sr-only">(current)</span></a>
+                </li>
+                {% else %}
+
+                <li class="nav-item active">
+                <a class="nav-link" href="/login">Login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                <a class="nav-link" href="/signup">Signup <span class="sr-only">(current)</span></a>
+                </li>
+                {% endif %}
+
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div id="upper">
+            <div id ='logo'>
+                <h1 class="title">雅歌</h1>
+                <div id="myborder"></div>
+                <div id="secondborder"></div>
+            </div>
+        </div>
+
+        <div id='main'>
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </div>
+
+
+
+
+
+    </body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+</html>

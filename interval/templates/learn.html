@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div id="learn-page">
+    <div id="introduction">
+    <h1 class="learn-title">Music Learning</h1>
+    <p class="para">Where to start?
+        Studying music theory is as complex as the music itself, but the process doesn't need to be long or boring.
+    To understand the different elements, you will find here both the information and ways to practice it in an interactive way.
+    <a href="/signup">Singup</a> to use the interactive practice, or simply continue reading.
+    </p>
+    </div>
+
+
+    <div class="notes">
+    <h3 class="learn-title"> Notes </h3>
+    <p class="para">Notes are a simple representation of sound. Music has been around for thousands of
+        years before writing was even invented.
+        It is a basic form of human communication,
+        and like writing, we want to be able to represent it in a way that others will understand.
+        When we say "Note", we usually mean one sound. The earliest examples of musical notation predate western history.
+        Early musicians and scholars tried to pass down the oral practice of singing. Notation started as a practice in order to
+        remind musicians of musical patterns they already knew, and therefore it's near impossible to recreate these early music
+        pieces. </p>
+        <p class="para"> The musical notes we know and mostly use today, are a development of western music.
+            They began with a system designed
+            by the Italian monk Guido d'Arezzo in the 11th-century. At the time, western music looked and sounded very
+            differently than it does today.
+            Guido assigned the notes Ut (later turned to C), Re, Mi, Fa, Sol, and La in a system that used the palm of the hand.
+            Western music at the time of Guido relied on Hexachords (based 6 scales), and it wasn't until the 16th that
+            the modern method started to coalesce. The method used today is the brain child of none other than Johann Sebastian Bach,
+            who came up with the well-tempered piano which we use today for classical, rock, pop, jazz and more.
+    </p>
+    </div>
+
+
+    <div id="interval_explenation">
+    <h3 class="learn-title">Intervals</h3>
+    <p class="para">
+        An Interval is the distance between two notes. Bach's well tempered piano split the octave,
+        the distance between C and the next C, into 11 possible sounds.
+        In western music we use something called a scale which is made up
+        of 7 sounds out of the possible 11.
+        The most known to most are the major scale, "C D E F G A B", and the minor scale "A B C D E F G".
+        The distance between each sound in the octave is called a semitone, and two steps make up a tone.
+
+    </p>
+
+    <ul class="interval-list"> The intervals of the major scale are:
+        <li>The distance from C to itself is 0 and the interval is called a unison. For now it may seem useless to
+            define this, but it will have meaning later on</li>
+        <li>From C to D there is one tone and the interval is a major second</li>
+        <li>From D to E there is one tone and the interval is a major second</li>
+        <li>From E to F there is a semitone and the interval is a minor second</li>
+        <li>From F to G there is a tone and the interval is a major second</li>
+        <li>From G to A there is a tone and the interval is a major second</li>
+        <li>From A to B there is a tone and the interval is a major second</li>
+        <li>From B to C there is a semitone and the interval is a minor second</li>
+    </ul>
+    <p class="para">You may have noticed that the interval from one note to the next is called "second".
+    With the same logic, the interval between C and E will be a third and so on.
+        Intervals have families, a unison is very different from a second, and both are different from a third.
+        To begin your practice I want you to focus on three Intervals that are called Perfect Intervals. In this family
+        you can find the unison, the fourth, fifth, and the octave.
+        You can use your fingers to count: C will be 1, D is 2, E is 3, F will be our perfect fourth,
+        and G will be our perfect fifth. The Octave will be C, just like the unison.
+    </p>
+        <ul class="interval-list">The distance between these intervals are:
+        <li>A perfect fourth is 2 and a half tones</li>
+        <li>A perfect fifth is 3 and a half tones</li>
+        <li>An octave is 6 tones</li>
+        </ul>
+        Go and sign up now so you can use the practice to challenge yourself.
+
+    </div>
+    </div>
+
+
+{% endblock %}
